@@ -11,11 +11,9 @@ import {
   Button,
   TouchableNativeFeedback,
 } from "react-native";
-import * as SplashScreen from "expo-splash-screen";
 import { Pedometer } from "expo-sensors";
 import { save, getValueFor } from "./src/accessStorage";
 import { Target } from "./src/Target";
-import { Colony } from "./src/Colony";
 import { performStepApi } from "./src/performStepApi";
 import { createColony } from "./src/createColony";
 import {
