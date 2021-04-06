@@ -76,13 +76,4 @@ describe("alerts function", () => {
       } adorable sloth's`
     );
   });
-  test("if user is playing for first time, it get's welcome message", () => {
-    let previousPopulation = "";
-    let todayPopulation = 5;
-    alertsFunction("", "2021-03-13", previousPopulation, todayPopulation);
-    expect(Alert.alert).toHaveBeenCalledWith(
-      "Welcome to Guilt trip!",
-      "Walk to grow your Sloth family"
-    );
-  });
 });

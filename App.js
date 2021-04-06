@@ -50,14 +50,12 @@ export default class App extends Component {
   async componentDidMount() {
     try {
       await Font.loadAsync(customFonts);
-      // await SplashScreen.preventAutoHideAsync();
     } catch (e) {
       console.warn(e);
     }
     this._subscribe();
     this.prepareResources();
     this.interval = setInterval(() => {
-      // console.log("interval is ticking");
       if (this.state.speech) {
         var slothPosition = Math.floor(
           Math.random() * this.state.slothCollection.length
@@ -65,8 +63,6 @@ export default class App extends Component {
         var speaker = this.state.slothCollection[slothPosition];
         var slothPositionY =
           (slothPosition - (this.state.slothCollection.length - 1)) * -1;
-        // console.log("NEW SPEAKER");
-        // console.log(speaker);
         this.setState({
           slothWords: slothSpeech(speaker),
           xPosition: setXPosition(slothPosition),
@@ -151,7 +147,6 @@ export default class App extends Component {
           showInfo: false,
         },
         async () => {
-          //  await SplashScreen.hideAsync();
           alertsFunction(
             this.state.lastLogin,
             new Date(),
