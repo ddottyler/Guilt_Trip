@@ -12,14 +12,6 @@ You start with sloths and a step target for the day. The app tracks your steps b
 
 # How to use
 
-### Through Expo - **Recommended**
-
-1. Download the Expo go app on your phone.
-2. go to: 'https://expo.io/@ddottyler/projects/sloth'.
-
-- scan the QR code on the page to launch the app if navigated to using a web browser.
-- Or click open on Expo if navigated to using phone browser.
-
 ### Through repository
 
 1. clone repository to local libray.
