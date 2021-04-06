@@ -25,8 +25,8 @@ import {
 import { alertsFunction } from "./src/alerts";
 import TreeTop from "./assets/svgs/TreeTop";
 import TreeBottom from "./assets/svgs/TreeBottom";
-import { arrayOfClassics, arrayOfRares } from "./src/svgLoader";
 import * as Font from "expo-font";
+import { returnSloth } from "./src/returnSloth";
 
 let customFonts = {
   Patrick: require("./assets/fonts/PatrickHand-Regular.ttf"),
@@ -290,22 +290,6 @@ const styles = StyleSheet.create({
     paddingTop: "10%",
   },
 });
-
-function returnSloth(i) {
-  if (i % 5 === 0) {
-    let x = ((i / 5) % arrayOfRares.length) - 1;
-    if (x < 0) {
-      x = arrayOfRares.length - 1;
-    }
-    return arrayOfRares[x];
-  } else {
-    let x = ((i % 10) % arrayOfClassics.length) - 1;
-    if (x < 0) {
-      x = 0;
-    }
-    return arrayOfClassics[x];
-  }
-}
 
 const DisplaySloths = (props) => {
   let slothImages = [];
