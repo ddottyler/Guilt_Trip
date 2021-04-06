@@ -30,17 +30,13 @@ export function setXPosition(slothPosition) {
 }
 
 function choosePhrase(array) {
-  // console.log(array)
-  // console.log(array.length)
   return array[Math.floor(Math.random() * array.length)];
 }
 
 export function setYPosition(slothPosition) {
-  // console.log(slothPosition);
   let totalPosition =
     slothPosition * ((windowWidth * 39) / 90) +
     (windowWidth * 78) / 90 -
     windowWidth * 0.15;
-  // console.log(totalPosition);
   return totalPosition;
 }
