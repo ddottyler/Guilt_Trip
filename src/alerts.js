@@ -6,11 +6,15 @@ export function alertsFunction(
   previousPopulation,
   todayPopulation
 ) {
+  console.log(lastLogin);
+  console.log(today);
   let lastLogin2 = new Date(lastLogin);
+  console.log(lastLogin2);
   let today2 = new Date(today);
+  console.log(today2);
   let dateDifference2 = today2.setHours(0, 0, 0, 0) - lastLogin2;
   dateDifference2 = secondsToDays(dateDifference2);
-  if (lastLogin === "") {
+  if (lastLogin === "0") {
     Alert.alert("Welcome to Sloth!", "Walk to grow your Sloth family");
   } else if (dateDifference2 === 0) {
     Alert.alert(

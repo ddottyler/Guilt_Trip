@@ -5,7 +5,7 @@ jest.spyOn(Alert, "alert");
 
 describe("alerts function", () => {
   test("if date last logged in is the same as today", () => {
-    alertsFunction("2021-03-18", "2021-03-18");
+    alertsFunction("2021-04-6", "2021-04-6");
     expect(Alert.alert).toHaveBeenCalledWith(
       "Welcome back!",
       "Check your steps - have you hit today's target yet?"
