@@ -12,11 +12,6 @@ export function alertsFunction(
   let dateDifference2 = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
   if (lastLogin === "") {
     Alert.alert("Welcome to Sloth!", "Walk to grow your Sloth family");
-  } else if (dateDifference2 === 0) {
-    Alert.alert(
-      "Welcome back!",
-      "Check your steps - have you hit today's target yet?"
-    );
   } else if (dateDifference2 > 6) {
     Alert.alert("GAME OVER!", "You are a lazy loser!");
   } else if (dateDifference2 === 1 && previousPopulation < todayPopulation) {
@@ -37,6 +32,11 @@ export function alertsFunction(
       `You lazy loser. You killed ${
         previousPopulation - todayPopulation
       } adorable sloth's`
+    );
+  } else if (dateDifference2 - 1 === 0) {
+    Alert.alert(
+      "Welcome back!",
+      "Check your steps - have you hit today's target yet?"
     );
   }
 }

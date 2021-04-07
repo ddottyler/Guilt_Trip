@@ -4,13 +4,6 @@ import { Alert } from "react-native";
 jest.spyOn(Alert, "alert");
 
 describe("alerts function", () => {
-  test("if date last logged in is the same as today", () => {
-    alertsFunction("2021-04-06", "2021-04-06");
-    expect(Alert.alert).toHaveBeenCalledWith(
-      "Welcome back!",
-      "Check your steps - have you hit today's target yet?"
-    );
-  });
   test("if date last logged is over 6 days", () => {
     alertsFunction("2021-03-11", "2021-03-18");
     expect(Alert.alert).toHaveBeenCalledWith(
